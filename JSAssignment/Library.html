@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Library</title>
+    <link rel="stylesheet" href="Library.css">
+    
+</head>
+
+<body>
+    <div class="container">
+        <Label class="heading">
+            <h3 style="margin: 25px 5px; ">Add new book Details</h3>
+        </Label>
+        <form class="form" onsubmit="return validateform()">
+            <label for="category">Category</label>
+            <select id="category"">
+                <option value=" ECE">ECE</option>
+                <option value="IT" selected="selected">IT</option>
+                <option value="CSE">CSE</option>
+                <option value="EEE">EEE</option>
+            </select>
+
+            <div class="form-control">
+                <label for="book"> Book </label>
+                <input type="text" name="book" id="book" onkeyup=validatebook()>
+                <small>Error Message</small>
+            </div>
+
+            <div class="form-control">
+                <label for="email"> Author Email </label>
+                <input type="text" id="email" onkeyup=validateemail()>
+                <small>Error Message</small>
+            </div>
+
+            <div class="form-control">
+                <label for="authorname"> Author Name </label>
+                <input type="text" id="authorname" onkeyup=validatename()>
+                <small>Error Message</small>
+            </div>
+
+            <div class="form-control">
+                <label for="published"> Published </label>
+                <input type="text" id="published" onkeyup=validatepublish()>
+                <small>Error Message</small>
+            </div>
+
+            <div class="form-control">
+                <label for="price"> Price </label>
+                <input type="text" id="price" onkeyup=validateprice()>
+                <small>Error Message</small>
+            </div>
+            
+            <div class="submitbutton">
+                <button type="submit" class="submit">Submit</button>
+                <button type="reset" class="cancel">Cancel</button>
+                <button type="button" class="show" onclick=status()> Show</button>
+            </div>
+        </form>
+    </div>
+
+    <script type="text/javascript" src="Library.js"></script>
+</body>
+
+</html>
